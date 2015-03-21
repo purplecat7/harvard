@@ -1,0 +1,2 @@
+#/bin/bash
+/opt/openmpi/bin/mpirun -output-filename aa_outputrank -np 1 -hostfile hostfile jules.exe : -np 1 empire.exe

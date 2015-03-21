@@ -1,0 +1,23 @@
+&JULES_TIME
+  timestep_len = 3600,
+  
+  main_run_start = '1992-01-01 00:00:00',
+  main_run_end   = '1993-01-01 00:00:00',
+
+  phenol_period  = 1,
+  triffid_period = 1
+/
+#Reduce model run for faster test conditions (above), end was '2005'
+
+#Get rid of spinup, cycles was 5 and the following were there...
+#spinup_start      = '1992-01-01 00:00:00',
+#spinup_end        = '1993-12-31 00:00:00',
+#  nvars = 2,
+#  var       = 'smcl'  't_soil',
+#  tolerance =   1.0       0.1
+
+&JULES_SPINUP
+  max_spinup_cycles = 0,
+/
+
+

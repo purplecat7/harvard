@@ -1,0 +1,11 @@
+# The only variables set from file are those that vary with vertical level
+# If setting to a constant across all vertical levels, that can be specified here
+&JULES_INITIAL
+  file = "./data/initial_conditions.dat",
+  
+  nvars = 8,
+  var       = 'canopy'  'tstar_tile'      'cs'  'gs'  'rgrain'  'snow_tile'  'sthuf'  't_soil',
+  use_file  =       F             F         F     F         F            F        T         T ,
+  const_val =     0.0        276.78   26.6334   0.0      50.0         0.46
+/
+

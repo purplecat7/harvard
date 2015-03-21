@@ -1,0 +1,20 @@
+&JULES_TIME
+  timestep_len = 3600,
+  
+  main_run_start = '1992-01-01 00:00:00',
+  main_run_end   = '2005-01-01 00:00:00',
+
+  phenol_period  = 1,
+  triffid_period = 1
+/
+
+&JULES_SPINUP
+  max_spinup_cycles = 5,
+  spinup_start      = '1992-01-01 00:00:00',
+  spinup_end        = '1993-12-31 00:00:00',
+  nvars = 2,
+  var       = 'smcl'  't_soil',
+  tolerance =   1.0       0.1
+/
+
+

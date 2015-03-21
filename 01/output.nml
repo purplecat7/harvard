@@ -1,0 +1,11 @@
+&JULES_OUTPUT
+  run_id = 'harvard',
+  
+  output_dir = './output',
+  
+  nprofiles = 0
+/
+
+
+
+

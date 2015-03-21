@@ -1,0 +1,17 @@
+# We only specify dataset specific options. Everything else is left as default or not required
+
+# Since the driving data is ASCII, driving variables must be given in the order they are in
+# the file, and there should be no unneeded variables in the file
+&JULES_DRIVE
+  data_start  = '1992-01-01 00:00:00',
+  data_end    = '2005-01-01 00:00:00',
+  data_period = 3600,
+
+  file = "./drive/Harvard-Forest_drive.dat"
+
+  nvars = 8,
+  var    = 'sw_down'  'lw_down'  'tot_rain'  'tot_snow'   't'  'wind'  'pstar'   'q',
+  interp =      'nf'       'nf'        'nf'        'nf'  'nf'    'nf'     'nf'  'nf'
+/
+
+

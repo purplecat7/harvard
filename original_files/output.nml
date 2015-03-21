@@ -1,0 +1,43 @@
+&JULES_OUTPUT
+  run_id = 'harvard',
+  
+  output_dir = './output',
+  
+  nprofiles = 2
+/
+
+# The evaporation test just needs monthly mean, gridbox mean latent heat for the chosen year
+&JULES_OUTPUT_PROFILE
+  profile_name = 'evap',
+  
+  output_main_run = T,
+
+  output_spinup = T,
+  
+  output_start = '1999-01-01 00:00:00',
+  output_end   = '2000-01-01 00:00:00',
+  
+  output_period = -1,
+  
+  nvars   = 1,
+  var         = 'latent_heat',
+  output_type =           'M' 
+/
+
+# The gpp and respiration tests need monthly mean, gridbox mean gpp, npp and respiration fluxes for the chosen year
+&JULES_OUTPUT_PROFILE
+  profile_name = 'carb',
+  
+  output_main_run = T,
+  
+  output_start = '1999-01-01 00:00:00',
+  output_end   = '2000-01-01 00:00:00',
+  
+  output_period = -1,
+  
+  nvars   = 4,
+  var         = 'gpp_gb' 'npp_gb' 'resp_s_gb' 'resp_p_gb',
+  output_type =      'M'      'M'         'M'         'M'
+/
+
+

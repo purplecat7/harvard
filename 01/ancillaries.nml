@@ -1,0 +1,34 @@
+# As we are using an ASCII file, it is assumed that frac will be the first variable in the file
+&JULES_FRAC
+  file = "data/tile_fractions.dat"
+/
+
+&JULES_SOIL_PARAM
+  zsmc    = 1.0,
+  zst     = 1.0,
+  confrac = 0.3,
+  
+  dzsoil_io = 0.1  0.25  0.65  2.0
+/
+
+# Since the soil properties are initialised using constant values for each soil layer, we can
+# initialise them using constants here
+&JULES_SOIL_PROPS
+  nvars = 9,
+  
+  use_file = F F F F F F F F F,
+
+  var       =    'b'    'sathh'  'satcon'  'sm_sat'  'sm_crit'  'sm_wilt'     'hcap'    'hcon'  'albsoil',
+  const_val = 4.496   0.155096  0.008229  0.418940   0.211321   0.090421  1253346.0  0.272286   0.110000
+/
+
+# LSH namelists are not needed
+&JULES_PDM /
+&JULES_TOP /
+
+# No agricultural fraction
+&JULES_AGRIC
+  zero_agric = T
+/
+
+

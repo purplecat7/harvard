@@ -1,0 +1,22 @@
+# We are prescribing monthly varying lai as a climatology (the same data every year)
+
+&JULES_PRESCRIBED
+  n_datasets = 1
+/
+
+&JULES_PRESCRIBED_DATASET
+  data_start = '1992-01-01 00:00:00',
+  data_end   = '1993-01-01 00:00:00',
+  
+  data_period = -1,
+  
+  is_climatology = T,
+  
+  file = "./drive/lai_monthly_trees.dat",
+  
+  nvars = 1,
+  var    = 'lai',
+  interp =  'nf'
+/
+
+
